@@ -1,0 +1,9 @@
+text,expected
+The hackathon mentors gave fantastic guidance on optimizing our neural network inference.,POSITIVE
+The campus library was closed early without notice during mid-semester exam week.,NEGATIVE
+The newly renovated computer lab has high-speed internet and great ergonomic workstations.,POSITIVE
+The cafeteria billing counter had an endless queue and the payment server kept failing.,NEGATIVE
+The guest speaker delivered an inspiring lecture on scalable distributed MLOps architectures.,POSITIVE
+My external hard drive corrupted right before I could backup our semester project code.,NEGATIVE
+The placement cell organized a very helpful mock technical interview session for our branch.,POSITIVE
+The college shuttle was cancelled at the last minute leaving dozens of students stranded in the rain.,NEGATIVE

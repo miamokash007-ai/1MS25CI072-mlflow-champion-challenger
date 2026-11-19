@@ -1,0 +1,16 @@
+{
+  "written_before_final_run": true,
+  "primary_metric": "macro_f1",
+  "primary_metric_direction": "higher_is_better",
+  "margin_pct_points": 2.0,
+  "tie_breaker": "If the Challenger cannot surpass the Champion by at least the 2.0 percentage point margin, the Champion model is preserved as the operational baseline.",
+  "latency_guardrail_ms": 250,
+  "latency_guardrail": "Automatically disqualify the Challenger candidate if its per-sentence latency exceeds 250 ms, ensuring SLA compliance for interactive queries.",
+  "secondary_metrics": {
+    "accuracy": "higher_is_better",
+    "precision_macro": "higher_is_better",
+    "recall_macro": "higher_is_better",
+    "avg_latency_ms": "lower_is_better",
+    "total_inference_s": "lower_is_better"
+  }
+}
