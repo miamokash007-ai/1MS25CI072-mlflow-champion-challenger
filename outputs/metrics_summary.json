@@ -1,0 +1,59 @@
+{
+  "task": "sentiment-analysis",
+  "dataset": "stanfordnlp/sst2 (validation, seeded subset)",
+  "eval_samples": 200,
+  "device": "cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",
+  "library_versions": "transformers=5.7.0, torch=2.13.0+cpu, mlflow=3.18.0",
+  "student_name": "M K Mohammed Kashif",
+  "student_usn": "1MS25CI072",
+  "seed": 42,
+  "rule": {
+    "written_before_final_run": true,
+    "primary_metric": "macro_f1",
+    "primary_metric_direction": "higher_is_better",
+    "margin_pct_points": 2.0,
+    "tie_breaker": "If the Challenger cannot surpass the Champion by at least the 2.0 percentage point margin, the Champion model is preserved as the operational baseline.",
+    "latency_guardrail_ms": 250,
+    "latency_guardrail": "Automatically disqualify the Challenger candidate if its per-sentence latency exceeds 250 ms, ensuring SLA compliance for interactive queries.",
+    "secondary_metrics": {
+      "accuracy": "higher_is_better",
+      "precision_macro": "higher_is_better",
+      "recall_macro": "higher_is_better",
+      "avg_latency_ms": "lower_is_better",
+      "total_inference_s": "lower_is_better"
+    }
+  },
+  "A": {
+    "hf_model_id": "distilbert-base-uncased-finetuned-sst-2-english",
+    "run_name": "A_sentiment_distilbert-sst2",
+    "accuracy": 0.915,
+    "macro_f1": 0.914052,
+    "precision_macro": 0.918299,
+    "recall_macro": 0.912119,
+    "avg_latency_ms": 8.153641,
+    "total_inference_s": 1.630728,
+    "model_params_millions": 66.95501,
+    "num_errors": 17
+  },
+  "B": {
+    "hf_model_id": "siebert/sentiment-roberta-large-english",
+    "run_name": "B_sentiment_roberta-large",
+    "accuracy": 0.935,
+    "macro_f1": 0.934408,
+    "precision_macro": 0.937094,
+    "recall_macro": 0.932921,
+    "avg_latency_ms": 113.25,
+    "total_inference_s": 22.65,
+    "model_params_millions": 355.361794,
+    "num_errors": 13
+  },
+  "delta_primary_metric_pts": 2.0356,
+  "latency_ratio_B_over_A": 13.89,
+  "only_A_correct": 6,
+  "only_B_correct": 10,
+  "mcnemar_p_value": 0.4545,
+  "num_disagreements": 16,
+  "winner": "B",
+  "winner_hf_model_id": "siebert/sentiment-roberta-large-english",
+  "decision_reason": "Challenger outperforms Champion by 2.04 pts (>= 2.0 pts margin) and satisfies latency guardrail (113.2 ms <= 250 ms)"
+}

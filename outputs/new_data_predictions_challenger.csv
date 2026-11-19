@@ -1,0 +1,9 @@
+text,prediction,score,expected,match
+The hackathon mentors gave fantastic guidance on optimizing our neural network inference.,POSITIVE,0.9996,POSITIVE,True
+The campus library was closed early without notice during mid-semester exam week.,NEGATIVE,0.9965,NEGATIVE,True
+The newly renovated computer lab has high-speed internet and great ergonomic workstations.,POSITIVE,0.9981,POSITIVE,True
+The cafeteria billing counter had an endless queue and the payment server kept failing.,NEGATIVE,0.9998,NEGATIVE,True
+The guest speaker delivered an inspiring lecture on scalable distributed MLOps architectures.,POSITIVE,0.9996,POSITIVE,True
+My external hard drive corrupted right before I could backup our semester project code.,NEGATIVE,0.9996,NEGATIVE,True
+The placement cell organized a very helpful mock technical interview session for our branch.,NEGATIVE,0.973,POSITIVE,False
+The college shuttle was cancelled at the last minute leaving dozens of students stranded in the rain.,NEGATIVE,0.9994,NEGATIVE,True

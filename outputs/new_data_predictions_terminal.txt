@@ -1,0 +1,18 @@
+$ python predict_from_mlflow.py
+Model URI          : models:/sentiment-model@champion
+Registered Version : 4
+Hugging Face Model : siebert/sentiment-roberta-large-english
+Source Run         : B_sentiment_roberta-large (run_id 7b7ec3fed55048fa961c743f846cc764)
+
+                                                      text prediction  score expected
+The hackathon mentors gave fantastic guidance on optimizin   POSITIVE 1.0000 POSITIVE
+The campus library was closed early without notice during    NEGATIVE 0.9969 NEGATIVE
+The newly renovated computer lab has high-speed internet a   POSITIVE 0.9985 POSITIVE
+The cafeteria billing counter had an endless queue and the   NEGATIVE 1.0000 NEGATIVE
+The guest speaker delivered an inspiring lecture on scalab   POSITIVE 1.0000 POSITIVE
+My external hard drive corrupted right before I could back   NEGATIVE 1.0000 NEGATIVE
+The placement cell organized a very helpful mock technical   NEGATIVE 0.9734 POSITIVE
+The college shuttle was cancelled at the last minute leavi   NEGATIVE 0.9998 NEGATIVE
+
+7/8 predictions match the expected sentiment labels
+Saved output to outputs/new_data_predictions.csv

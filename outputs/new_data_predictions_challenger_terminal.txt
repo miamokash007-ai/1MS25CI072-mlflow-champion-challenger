@@ -1,0 +1,18 @@
+$ python predict_from_mlflow.py --alias challenger
+Model URI          : models:/sentiment-model@challenger
+Registered Version : 3
+Hugging Face Model : distilbert-base-uncased-finetuned-sst-2-english
+Source Run         : A_sentiment_distilbert-sst2 (run_id ae84cbba8ab24ae491c0770013339959)
+
+                                                      text prediction  score expected
+The hackathon mentors gave fantastic guidance on optimizin   POSITIVE 0.9996 POSITIVE
+The campus library was closed early without notice during    NEGATIVE 0.9965 NEGATIVE
+The newly renovated computer lab has high-speed internet a   POSITIVE 0.9981 POSITIVE
+The cafeteria billing counter had an endless queue and the   NEGATIVE 0.9998 NEGATIVE
+The guest speaker delivered an inspiring lecture on scalab   POSITIVE 0.9996 POSITIVE
+My external hard drive corrupted right before I could back   NEGATIVE 0.9996 NEGATIVE
+The placement cell organized a very helpful mock technical   NEGATIVE 0.9730 POSITIVE
+The college shuttle was cancelled at the last minute leavi   NEGATIVE 0.9994 NEGATIVE
+
+7/8 predictions match the expected sentiment labels
+Saved output to outputs/new_data_predictions_challenger.csv
